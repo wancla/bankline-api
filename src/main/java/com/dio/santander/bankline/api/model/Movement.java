@@ -18,45 +18,65 @@ public class Movement {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	
-	@Column(name = "datetime")
+	@Column(name = "date_time")
 	private LocalDateTime datetime;
 	
-	private String desc;
+	private String description;
 	
 	private Double value;
 	
 	@Enumerated(EnumType.STRING)
 	private MovementType type;
 	
+	@Column(name = "id_account")
+	private Integer idAccount;
+	
 	public Integer getId() {
 		return id;
 	}
+	
 	public void setId(Integer id) {
 		this.id = id;
 	}
+	
 	public LocalDateTime getDatetime() {
 		return datetime;
 	}
+	
 	public void setDatetime(LocalDateTime datetime) {
 		this.datetime = datetime;
 	}
-	public String getDesc() {
-		return desc;
+	
+	public String getDescription() {
+		return description;
 	}
-	public void setDesc(String desc) {
-		this.desc = desc;
+	
+	public void setDescription(String description) {
+		this.description = description;
 	}
+	
 	public Double getValue() {
 		return value;
 	}
+	
 	public void setValue(Double value) {
 		this.value = value;
 	}
+	
 	public MovementType getType() {
 		return type;
 	}
+	
 	public void setType(MovementType type) {
 		this.type = type;
+	}
+	
+	public Integer getIdAccount() {
+		return idAccount;
+	}
+	
+	public void setIdAccount(Integer idAccount) {
+		this.idAccount = idAccount;
 	}
 	
 	

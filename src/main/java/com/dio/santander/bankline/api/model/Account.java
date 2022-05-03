@@ -5,21 +5,24 @@ import javax.persistence.Embeddable;
 
 @Embeddable
 public class Account {
-	@Column(name = "aacount_number")
+	@Column(name = "account_number")
 	private Long number;
 	
-	@Column(name = "aacount_balance")
+	@Column(name = "account_balance")
 	private Double balance;
 	
 	public Long getNumber() {
 		return number;
 	}
+	
 	public void setNumber(Long number) {
 		this.number = number;
 	}
+	
 	public Double getBalance() {
 		return balance;
 	}
+	
 	public void setBalance(Double balance) {
 		this.balance = balance;
 	}
