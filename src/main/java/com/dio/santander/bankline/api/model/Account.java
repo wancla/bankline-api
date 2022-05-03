@@ -1,7 +1,14 @@
 package com.dio.santander.bankline.api.model;
 
+import javax.persistence.Column;
+import javax.persistence.Embeddable;
+
+@Embeddable
 public class Account {
+	@Column(name = "aacount_number")
 	private Long number;
+	
+	@Column(name = "aacount_balance")
 	private Double balance;
 	
 	public Long getNumber() {
